@@ -1,5 +1,5 @@
 # excel-util2
-随便写的一个EXCEL解析工具
+右手写的一个EXCEL解析工具
 使用时需要传递xml配置文件
 Spring Boot 项目使用时 需要Spring 托管一个bean
 
