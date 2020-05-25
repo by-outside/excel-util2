@@ -3,7 +3,7 @@
 使用时需要传递xml配置文件
 Spring Boot 项目使用时 需要Spring 托管一个bean
 
-```
+```java
    @Bean
     public XmlUtil builderUtil(){
         //配置文件名称
@@ -18,7 +18,7 @@ XML.文件内容
 
 
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <entitys>
     <!--
