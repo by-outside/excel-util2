@@ -1,5 +1,23 @@
 # excel-util2
 随便写的一个EXCEL解析工具
+使用时需要传递xml配置文件
+Spring Boot 项目使用时 需要Spring 托管一个bean
+
+```
+   @Bean
+    public XmlUtil builderUtil(){
+        //配置文件名称
+        String xmlName = "excel.xml";
+        InputStream resourceAsStream = this.getClass().getClassLoader().getResourceAsStream(xmlName);
+        return new XmlUtil(resourceAsStream);
+    }
+```
+
+
+XML.文件内容
+
+
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <entitys>
@@ -8,7 +26,7 @@
         class：全类名
            id：为该实体类的唯一标识
     -->
-    <entity class="com.gkreeda.cloud.entity.User" id="user">
+    <entity class="com.zongyi.entity.User" id="user">
         <!--
             property：类的成员变量对应Excel的每一列
                 name：为成员变量名
